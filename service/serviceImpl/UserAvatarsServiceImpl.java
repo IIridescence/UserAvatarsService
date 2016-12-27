@@ -44,10 +44,12 @@ public class UserAvatarsServiceImpl implements UserAvatarsService{
 		// TODO Auto-generated method stub	
 		List<String> list = picImpl.uploadPicture(multipartFile);
 		
-		String picId = list.get(0);
-		
-		if(picId!=null){
-			return userDao.insertUserAvatar(userId, picId);
+		if(list.size()==1){
+			String picId = list.get(0);
+			
+			if(picId!=null){
+				return userDao.insertUserAvatar(userId, picId);
+			}
 		}
 		
 		return false;
