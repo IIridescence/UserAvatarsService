@@ -11,7 +11,7 @@ import cn.edu.bjtu.weibo.dao.ImgDAO;
 import cn.edu.bjtu.weibo.model.Picture;
 import cn.edu.bjtu.weibo.service.UserAvatarsService;
 
-@Service
+@Service("userAvatarsService")
 public class UserAvatarsServiceImpl implements UserAvatarsService{
 	
 	@Autowired
